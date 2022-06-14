@@ -8,25 +8,271 @@
     <link rel="shortcut icon" href="assets/business.ico">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <title>Biz Devz</title>
 </head>
 <body>
+    <!-- Navbar section -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#">
+                <span>B</span>iz <span>D</span>evz
+            </a>
+        </div>
+        <ul class="nav-list">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#pricing" class="nav-link">Pricing</a></li>
+            <li><a class="nav-link">Blog</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Menu -->
+    <div class="menu">
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+        <div class="line line-3"></div>
+    </div>
+
     <div class="container">
         <!-- First section -->
-        <section class="section-1">
+        <section class="section-1" id="home">
             <div class="banner">
                 <h1 class="banner-heading">
-                    <span class="heading-1">Business Consulting</span>
-                    <span class="heading-1">Business branding</span>
-                    <span class="heading-1">Risk Analysis</span>
-                    <span class="heading-1">Growth / Marketing</span>
+                    <span class="heading-1">Biz devz</span>
+                    <span class="heading-2">Business branding</span>
+                    <span class="heading-3">Risk Analysis</span>
+                    <span class="heading-4">Growth / Marketing</span>
                 </h1>
-                <p class="banner-p">We belive we can bring your idea to life</p>
+                <p class="banner-p">Let us bring your idea to life</p>
                 <button class="banner-btn">I'm Interested</button>
             </div>
         </section>
+
+        <!-- Second section -->
+        <section class="section-2" id="about">
+            <h2 class="section-heading">About us</h2>
+            <div class="section-heading-line"></div>
+            <div class="video-wrapper">
+                <video src="assets/about-us-video.mp4" class="video"></video>
+                <div class="controls">
+                    <div class="video-bar-wrapper">
+                        <div class="video-bar"></div>
+                    </div>
+                    <div class="video-btns">
+                        <button>
+                            <i class="far fa-play-circle"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <p class="section-2-p">
+                <i class="fas fa-quote-left"></i>
+                Here at Biz Devz, we believe no idea is impossible 
+                to become reality. With our fun and creative team, 
+                productivity is always acheived as we come up with 
+                the best methods to bring your ideas to life. 
+                Covering the risk analysis, development of the idea and growth / marketing. 
+                We don't leave you here however, we offer consultancy as you grow. Be rest assured.
+                <i class="fas fa-quote-right"></i>
+            </p>
+        </section>
+
+        <!-- Third section -->
+        <section class="section-3" id="pricing">
+            <h2 class="section-heading">Pricing</h2>
+            <div class="section-heading-line"></div>
+            <div class="swiper mySwiper">
+                <div class="pricing-cards-wrapper swiper-wrapper">
+                    <div class="pricing-card swiper-slide">
+                        <div class="pricing-card-front">
+                            <h2 class="pricing-card-heading heading-free">FREE</h2>
+                            <h3 class="pricing-card-price">$0</h3>
+                            <ul class="pricing-card-list list-free">
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    <span>Lorem, ipsum dolor.</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    <span>Lorem, ipsum dolor.</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-times"></i>
+                                    <span>Lorem, ipsum dolor.</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-times"></i>
+                                    <span>Lorem, ipsum dolor.</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-times"></i>
+                                    <span>Lorem, ipsum dolor.</span>
+                                </li>
+                            </ul>
+                            <button class="pricing-card-btn btn-free">Choose Plan</button>
+                        </div>
+                        <div class="pricing-card-back back-free">
+                            <a>Get started</a>
+                        </div>
+                    </div>
+                    <div class="pricing-card swiper-slide">
+                        <div class="pricing-card-front">
+                            <h2 class="pricing-card-heading heading-standard">STANDARD</h2>
+                            <h3 class="pricing-card-price">$198</h3>
+                            <ul class="pricing-card-list list-standard">
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    <span>Lorem, ipsum dolor.</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    <span>Lorem, ipsum dolor.</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    <span>Lorem, ipsum dolor.</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    <span>Lorem, ipsum dolor.</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-times"></i>
+                                    <span>Lorem, ipsum dolor.</span>
+                                </li>
+                            </ul>
+                            <button class="pricing-card-btn btn-standard">Choose Plan</button>
+                        </div>
+                        <div class="pricing-card-back back-standard">
+                            <a>Get started</a>
+                        </div>
+                    </div>
+                    <div class="pricing-card swiper-slide">
+                        <div class="pricing-card-front">
+                            <h2 class="pricing-card-heading heading-plus">PLUS</h2>
+                            <h3 class="pricing-card-price">$529</h3>
+                            <ul class="pricing-card-list list-plus">
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    <span>Lorem, ipsum dolor.</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    <span>Lorem, ipsum dolor.</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    <span>Lorem, ipsum dolor.</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    <span>Lorem, ipsum dolor.</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    <span>Lorem, ipsum dolor.</span>
+                                </li>
+                            </ul>
+                            <button class="pricing-card-btn btn-plus">Choose Plan</button>
+                        </div>
+                        <div class="pricing-card-back back-plus">
+                            <a>Get started</a>
+                        </div>
+                    </div>
+                    <div class="pricing-card swiper-slide">
+                        <div class="pricing-card-front">
+                            <h2 class="pricing-card-heading heading-premium">PREMIUM</h2>
+                            <h3 class="pricing-card-price">$789</h3>
+                            <ul class="pricing-card-list list-premium">
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    <span>Lorem, ipsum dolor.</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    <span>Lorem, ipsum dolor.</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    <span>Lorem, ipsum dolor.</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    <span>Lorem, ipsum dolor.</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    <span>Lorem, ipsum dolor.</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    <span>Lorem, ipsum dolor.</span>
+                                </li>
+                            </ul>
+                            <button class="pricing-card-btn btn-premium">Choose Plan</button>
+                        </div>
+                        <div class="pricing-card-back back-premium">
+                            <a>Get started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <!-- Fourth section -->
+        <section class="section-4" id="contact">
+            <h2 class="section-heading">Contact</h2>
+            <div class="section-heading-line"></div>
+            <div class="contact-wrapper">
+                <div class="contact-details">
+                    <div class="phone">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Phone</h3>
+                        <p><a href="tel:+234-08567-89356">+234-08567-89356</a></p>
+                        <p><a href="tel:+234-08567-89356">+234-08567-89356</a></p>
+                    </div>
+                    <div class="address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Address</h3>
+                        <p>10789 Biri avenue GB SE</p>
+                        <p>10789 Biri avenue GB SE</p>
+                    </div>
+                    <div class="email">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p><a href="mailto:chisombiri@outlook.com">chisombiri@outlook.com</a></p>
+                        <p><a href="mailto:chisombirisupport@outlook.com"></a></p>
+                    </div>
+                </div>
+                <h2>Get in touch</h2>
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name(s)">
+                    <input type="email" placeholder="Your Email">
+                    <textarea placeholder="Your Message"></textarea>
+                    <input type="submit" value="Send Message">
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer section -->
+        <footer class="footer">
+            <div class="footer-nav">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <p class="copyright">
+                Chisombiri &copy; 2022
+            </p>
+        </footer>
+
     </div>
 
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

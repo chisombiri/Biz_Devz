@@ -11,5 +11,679 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
+    font-family: 'Baloo Da 2', cursive;
 }
 
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+.section-heading{
+    font-size: 10rem;
+    font-family: 'Oswald', sans-serif;
+    font-weight: lighter;
+    color: #ddd;
+    margin-right: 4rem;
+}
+
+.section-heading-line{
+    width: 15rem;
+    height: 0.2rem;
+    background-color: #ddd;
+}
+
+/* Navbar styling */
+.navbar{
+    width: 100%;
+    height: 8rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: -8rem;
+    z-index: 10;
+    padding: 3rem;
+    transition: height 0.5s;
+    animation: moveNavbar 1s 0.5s forwards;
+}
+
+@keyframes moveNavbar {
+    0%{
+        top: -8rem;
+    }
+    100%{
+        top: 0;
+    }
+}
+
+.navbar.change{
+    height: 100vh;
+}
+
+.logo{
+    position: absolute;
+    top: 1.5rem;
+    left: 4rem;
+}
+
+.logo a{
+    font-size: 2.5rem;
+    color: #eee;
+    letter-spacing: 0.2rem;
+    font-family: 'MADE Soulmaze', sans-serif;
+}
+
+.logo span{
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #9e0e09;
+    font-family: 'MADE Soulmaze', sans-serif;
+}
+
+.nav-list{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s;
+}
+
+.change .nav-list{
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.8s 0.5s;
+}
+
+.nav-list li{
+    margin: 2rem 0;
+}
+
+.nav-link{
+    color: #ffffff;
+    font-family: 'MADE Soulmaze', sans-serif;
+    font-size: 4rem;
+    letter-spacing: 0.3rem;
+    transition: color 0.5s;
+}
+
+.nav-link:hover{
+    color: #9e0e09;
+}
+
+/* meny styling */
+.menu{
+    cursor: pointer;
+    position: fixed;
+    z-index: 20;
+    top: 2rem;
+    right: 4rem;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.line{
+    height: 0.3rem;
+    width: 100%;
+    background-color: #eee;
+    transition: transform 0.4s;
+}
+
+.line-1{
+    width: 50%;
+}
+
+.change .line-1{
+    transform: translate(100%, 1rem) rotateZ(-35deg);
+    transform-origin: right;
+}
+
+.line-3{
+    width: 50%;
+    margin-left: auto; /* place line to right side */
+}
+
+.change .line-3{
+    transform: translateY(-1rem) rotateZ(35deg);
+    transform-origin: right;
+}
+
+/* First section styles */
+.section-1{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(assets/dark-bg.jpeg) no-repeat;
+    background-size: cover;
+}
+
+.banner{
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+}
+
+.banner-heading{
+    margin-bottom: 4rem;
+    height: 20rem;
+    perspective: 50rem;
+    overflow: hidden;
+}
+
+.banner-heading span{
+    position: absolute;
+    font-family: 'Oswald', sans-serif;
+    font-size: 12rem;
+    font-weight: 400;
+    color: #ffffff;
+    text-shadow: 0.3rem 0.3rem 0.6rem rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transform: translateZ(8rem);
+    opacity: 0;
+    letter-spacing: 3rem;
+}
+
+.heading-1{
+    animation: headingAnimation 12s 3s infinite;
+}
+
+.heading-2{
+    animation: headingAnimation 12s 6s infinite;
+}
+
+.heading-3{
+    animation: headingAnimation 12s 9s infinite;
+}
+
+.heading-4{
+    animation: headingAnimation 12s 12s infinite;
+}
+
+@keyframes headingAnimation {
+    0%{
+        transform: translateZ(8rem);
+        opacity: 0;
+        letter-spacing: 3rem;
+    }
+    3%{
+        transform: translateZ(0);
+        opacity: 1;
+        letter-spacing: 1.5rem;
+    }
+    25%{
+        transform: translateZ(0);
+        opacity: 1;
+        letter-spacing: 1.5rem;
+    }
+    28%{
+        transform: translateZ(8rem);
+        opacity: 0;
+        letter-spacing: 3rem;
+    }
+    100%{
+        transform: translateZ(8rem);
+        opacity: 0;
+        letter-spacing: 3rem;
+    }
+}
+
+.banner-p{
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 30%;
+    margin: 0 auto 4rem auto;
+    padding: 1rem 0;
+    box-shadow: 1rem 1rem 5rem rgba(0, 0, 0, 0.5);
+    font-size: 4rem;
+    opacity: 0;
+    visibility: hidden;
+    animation: fade 1s 1.5s forwards;
+}
+
+.banner-btn{
+    margin-top: 3.2rem;
+    position: relative;
+    cursor: pointer;
+    width: 30rem;
+    height: 6rem;
+    color: #ffffff;
+    font-size: 2rem;
+    text-transform: uppercase;
+    border: 0.1rem solid #800505;
+    box-shadow: 1rem 2rem 3rem rgba(0, 0, 0, 0.5);
+    text-shadow: 0.6rem 0.3rem 0.2rem rgba(0, 0, 0, 0.4);
+    border-radius: 3rem;
+    background: linear-gradient(to right, #9b0e0e, #7a1010);
+    opacity: 0;
+    visibility: hidden;
+    animation: fade 1s 2s forwards;
+    overflow: hidden;
+}
+
+.banner-btn::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, #ffffff, transparent);
+    top: 0;
+    transform: skewX(-30deg);
+    left: -100%;
+    transition: left 0.6s;
+}
+
+.banner-btn:hover::before{
+    left: 100%;
+}
+
+@keyframes fade {
+    0%{
+        opacity: 0;
+        visibility: hidden;
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/* Second section styles */
+.section-2{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #222020;
+    display: flex;
+    align-items: center;
+    padding: 0 10rem;
+}
+
+.video-wrapper{
+    position: absolute;
+    height: 50rem;
+    width: 100rem;
+    top: 7rem;
+    right: 15rem;
+    box-shadow: 3rem 3rem 3rem rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+}
+
+.video{
+    opacity: 0.4;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.4s;
+}
+
+.controls{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: translateY(calc(100% - 0.4rem));
+    transition: transform 0.5s;
+}
+
+.video-wrapper:hover .controls{
+    transform: translateY(0);
+}
+
+.video-bar-wrapper{
+    width: 100%;
+    height: 0.8rem;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.video-bar{
+    height: 100%;
+    width: 0;
+    background-color: #d30819;
+    transition: width 0.2s linear;
+    border-radius: 1rem;
+}
+
+.video-btns{
+    padding: 2rem 1rem 1rem 1rem;
+}
+
+.video-btns button{
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.video-btns i{
+    color: #ffffff;
+    font-size: 2.8rem;
+}
+
+.section-2-p{
+    font-size: 2rem;
+    color: #ddd;
+    width: 100rem;
+    position: absolute;
+    right: 15rem;
+    bottom: 8rem;
+    padding: 2.4rem;
+    border-top: 0.3rem double #aaa;
+    border-bottom: 0.3rem double #aaa;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    text-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.7);
+}
+
+.fa-quote-left{
+    align-self: flex-start;
+    font-size: 5rem;
+    margin-bottom: 2rem;
+}
+
+.fa-quote-right{
+    align-self: flex-end;
+    font-size: 5rem;
+}
+
+/* Third section styles */
+.section-3{
+    width: 100%;
+    height: 100vh;
+    background-color: #03070e;
+    display: flex;
+    align-items: center;
+    padding-left: 10rem;
+}
+
+.pricing-cards-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5rem;
+}
+
+.pricing-card{
+    width: 28rem !important;
+    height: 46rem !important;
+    background-color: #181b1d;
+    box-shadow: 2rem 2rem 6rem rgba(0, 0, 0, 0.7);
+    border-radius: 1rem;
+}
+
+.pricing-card-front{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    backface-visibility: hidden;
+}
+
+.pricing-card-heading{
+    font-size: 2rem;
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    color: #ffffff;
+    border-radius: 1rem 1rem 0 0;
+    font-weight: 300;
+}
+
+.heading-free{
+    background: linear-gradient(to right, #087285,#0da5d3);
+}
+
+.heading-standard{
+    background: linear-gradient(to right, #946809,#bdba0e);
+}
+
+.heading-plus{
+    background: linear-gradient(to right, #a10c14,#e23b3b);
+}
+
+.heading-premium{
+    background: linear-gradient(to right, #0b7e48,#3be286);
+}
+
+.pricing-card-price{
+    font-size: 7rem;
+    font-weight: 300;
+    color: #ffffff;
+    font-family: 'MADE Soulmaze', sans-serif;
+}
+
+.pricing-card-list li{
+    margin-bottom: 0.5rem;
+}
+
+.pricing-card-list i{
+    font-size: 1.8rem;
+    width: 3rem;
+}
+
+.pricing-card-list span{
+    font-weight: 300;
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+}
+
+.list-free li{
+    color: #0da5d3;
+}
+
+.list-standard li{
+    color: #bdba0e;
+}
+
+.list-plus li{
+    color: #e23b3b;
+}
+
+.list-premium li{
+    color: #3be286;
+}
+
+.pricing-card-btn{
+    width: 18rem;
+    text-transform: uppercase;
+    height: 5rem;
+    margin-bottom: 3rem;
+    border-radius: 3rem;
+    border: none;
+    font-size: 1.6rem;
+    color: #ffffff;
+    text-shadow: 0.3re 0.3rem 0.6rem rgba(0, 0, 0, 0.5);
+}
+
+.btn-free{
+    background-color: #0da5d3;
+}
+
+.btn-standard{
+    background-color: #bdba0e;
+}
+
+.btn-plus{
+    background-color: #e23b3b;
+}
+
+.btn-premium{
+    background-color: #3be286;
+}
+
+.pricing-card-back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(-180deg);
+    backface-visibility: hidden; /* to hide backface */
+}
+
+.back-free{
+    background-color: #0da5d3;
+}
+
+.back-standard{
+    background-color: #bdba0e;
+}
+
+.back-plus{
+    background-color: #e23b3b;
+}
+
+.back-premium{
+    background-color: #3be286;
+}
+
+.pricing-card-back a{
+    color: #ffffff;
+    font-size: 2.4rem;
+}
+
+/* Fourth section styles */
+.section-4{
+    width: 100%;
+    height: 100vh;
+    background-color: #171718;
+    display: flex;
+    align-items: center;
+    padding: 0 10rem;
+}
+
+.contact-wrapper{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-details{
+    display: flex;
+    margin-bottom: 8rem;
+}
+
+.contact-details div{
+    width: 25rem;
+    text-align: center;
+    margin: 4rem;
+}
+
+.contact-details i{
+    color: #7a1010;
+    font-size: 5rem;
+}
+
+.contact-details h3{
+    font-family: 'MADE Soulmaze', sans-serif;
+    font-size: 2.4rem;
+    margin: 2rem 0;
+    color: #ccc;
+    letter-spacing: 0.1rem;
+}
+
+.contact-details p, 
+.contact-details a{
+    color: #aaa;
+    font-size: 1.6rem;
+}
+
+.contact-wrapper h2{
+    font-size: 4rem;
+    color: #ccc;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+}
+
+.contact-form{
+    width: 70rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input, 
+.contact-form textarea{
+    padding: 1.5rem;
+    background-color: #444;
+    color: #eee;
+    border: none;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+.contact-form textarea{
+    max-width: 100%;
+    max-height: 15rem;
+    min-height: 5.5rem;
+}
+
+.contact-form input[type="submit"]{
+    cursor: pointer;
+    background-color: #7a1010;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.contact-form input[type="submit"]:hover{
+    background-color: #5f0303;
+}
+
+/* Footer styles */
+.footer{
+    width: 100%;
+    height: 12rem;
+    background-color: #202122;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10rem;
+}
+
+.footer-nav a{
+    font-size: 2rem;
+    color: #ccc;
+    font-family: 'MADE Soulmaze', sans-serif;
+    margin-right: 3rem;
+    letter-spacing: 0.1rem;
+    transition: color 0.4s;
+}
+
+.footer-nav a:hover{
+    color: #862323;
+}
+
+.copyright{
+    color: #ddd;
+    font-size: 2rem;
+}
