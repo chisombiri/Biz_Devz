@@ -1,0 +1,15 @@
+@font-face {
+    font-family: MADE Soulmaze;
+    src: url(assets/MADE\ Soulmaze\ PERSONAL\ USE.otf);
+}
+
+/* default styles */
+*{
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
